@@ -1,138 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxe Haus Concept</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Haus Concept | Interior Design Singapore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
-      background: #111;
-      color: white;
-      padding: 20px 40px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(10px);
+      padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: bold;
+      color: #d4af37;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .hero {
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
         url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: white;
       padding: 20px;
     }
 
+    .hero-content {
+      max-width: 850px;
+    }
+
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 72px;
+      line-height: 1.1;
+      margin-bottom: 24px;
     }
 
     .hero p {
       font-size: 20px;
-      max-width: 700px;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
+      color: #f2f2f2;
     }
 
     .btn {
+      display: inline-block;
       background: #d4af37;
-      color: black;
-      padding: 14px 28px;
+      color: #111;
+      padding: 15px 34px;
+      border-radius: 999px;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .about h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.3s ease;
     }
 
-    footer {
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .cta {
       background: #111;
       color: white;
       text-align: center;
-      padding: 30px;
+      border-radius: 28px;
+      padding: 80px 30px;
+    }
+
+    .cta h2 {
+      font-size: 52px;
+      margin-bottom: 18px;
+    }
+
+    footer {
+      background: #0b0b0b;
+      color: #bbb;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      color: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Luxe Haus Concept</div>
-    <div>Interior Design • Renovation • Carpentry</div>
+  <header class="header">
+    <div class="logo">LUXE HAUS</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <h1>Designing Spaces You'll Love Coming Home To</h1>
-    <p>
-      Premium interior design and renovation services for HDB, condominium and landed homes in Singapore.
-    </p>
-    <a class="btn" href="mailto:kenneth@luxehausconcept.com">Get Free Consultation</a>
+    <div class="hero-content">
+      <h1>Designing Spaces You'll Love Coming Home To</h1>
+      <p>
+        Premium interior design, renovation and custom carpentry solutions for HDB, condominium and landed homes across Singapore.
+      </p>
+      <a class="btn" href="#contact">Book a Free Consultation</a>
+    </div>
   </section>
 
-  <section>
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>HDB Renovation</h3>
-        <p>Functional and stylish spaces tailored for modern Singapore living.</p>
-      </div>
-      <div class="card">
-        <h3>Condominium Design</h3>
-        <p>Elegant contemporary interiors that maximize comfort and value.</p>
-      </div>
-      <div class="card">
-        <h3>Custom Carpentry</h3>
-        <p>Built-in wardrobes, TV consoles, kitchen cabinets and storage solutions.</p>
+  <section id="about">
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen interior">
+      <div>
+        <h2>About Luxe Haus Concept</h2>
+        <p>
+          We create refined, functional interiors that reflect the lifestyle and aspirations of modern homeowners. From space planning to custom carpentry and full-scale renovation, we focus on thoughtful details, quality workmanship, and a seamless client experience from concept to completion.
+        </p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Why Choose Luxe Haus Concept?</h2>
-    <ul>
-      <li>Transparent quotations</li>
-      <li>3D design visualisation</li>
-      <li>Quality workmanship</li>
-      <li>Dedicated project coordination</li>
-      <li>After-sales support</li>
-    </ul>
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Tailored renovation and interior design solutions for every home.</p>
+    </div>
+
+    <div class="services">
+      <div class="card">
+        <h3>HDB Renovation</h3>
+        <p>Smart, space-efficient designs tailored for modern HDB living.</p>
+      </div>
+
+      <div class="card">
+        <h3>Condominium Design</h3>
+        <p>Elegant contemporary interiors that enhance comfort, style, and value.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Carpentry</h3>
+        <p>Built-in wardrobes, TV consoles, kitchen cabinets, and bespoke storage solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="section-title">
+      <h2>Featured Inspiration</h2>
+      <p>Replace these placeholder images with your completed projects.</p>
+    </div>
+
+    <div class="portfolio">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Luxury living room interior">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen interior">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Minimalist bedroom interior">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <h2>Let's Create Your Dream Space</h2>
+      <p>
+        Whether you're renovating a BTO, resale HDB, condominium, or landed property, we're here to bring your vision to life.
+      </p>
+      <br>
+      <a class="btn" href="mailto:kenneth@luxehausconcept.com">Get a Free Quote</a>
+    </div>
   </section>
 
   <footer>
-    © 2026 Luxe Haus Concept Pte Ltd • Singapore
+    © 2026 Luxe Haus Concept Pte Ltd • Singapore • Interior Design & Renovation
   </footer>
+
+  <a class="whatsapp" href="https://wa.me/6591234567" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
 </body>
 </html>
