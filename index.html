@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Haus Concept</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
 
+    header {
+      background: #111;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #d4af37;
+      color: black;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Luxe Haus Concept</div>
+    <div>Interior Design • Renovation • Carpentry</div>
+  </header>
+
+  <section class="hero">
+    <h1>Designing Spaces You'll Love Coming Home To</h1>
+    <p>
+      Premium interior design and renovation services for HDB, condominium and landed homes in Singapore.
+    </p>
+    <a class="btn" href="mailto:kenneth@luxehausconcept.com">Get Free Consultation</a>
+  </section>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>HDB Renovation</h3>
+        <p>Functional and stylish spaces tailored for modern Singapore living.</p>
+      </div>
+      <div class="card">
+        <h3>Condominium Design</h3>
+        <p>Elegant contemporary interiors that maximize comfort and value.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Carpentry</h3>
+        <p>Built-in wardrobes, TV consoles, kitchen cabinets and storage solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Luxe Haus Concept?</h2>
+    <ul>
+      <li>Transparent quotations</li>
+      <li>3D design visualisation</li>
+      <li>Quality workmanship</li>
+      <li>Dedicated project coordination</li>
+      <li>After-sales support</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 Luxe Haus Concept Pte Ltd • Singapore
+  </footer>
+
+</body>
+</html>
