@@ -1,0 +1,245 @@
+## contact.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Luxe Haus Concept</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'Inter',sans-serif;
+      background:#fafafa;
+      color:#222;
+      line-height:1.7;
+    }
+
+    h1,h2,h3 {
+      font-family:'Cormorant Garamond',serif;
+    }
+
+    header {
+      background:#111;
+      padding:22px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo {
+      color:#d4af37;
+      font-size:28px;
+      letter-spacing:2px;
+    }
+
+    nav a {
+      color:white;
+      text-decoration:none;
+      margin-left:28px;
+      font-size:14px;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
+    .hero {
+      padding:140px 8% 80px;
+      text-align:center;
+      background:linear-gradient(180deg,#f8f8f8 0%,#ffffff 100%);
+    }
+
+    .hero h1 {
+      font-size:64px;
+      margin-bottom:16px;
+    }
+
+    .hero p {
+      max-width:720px;
+      margin:auto;
+      color:#666;
+      font-size:18px;
+    }
+
+    .container {
+      max-width:1100px;
+      margin:auto;
+      padding:80px 8%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+    }
+
+    .card {
+      background:white;
+      padding:40px;
+      border-radius:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      font-size:42px;
+      margin-bottom:24px;
+    }
+
+    .info-item {
+      margin-bottom:24px;
+    }
+
+    .info-item h3 {
+      font-size:24px;
+      margin-bottom:8px;
+    }
+
+    form {
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    input, textarea {
+      width:100%;
+      padding:16px 18px;
+      border:1px solid #ddd;
+      border-radius:14px;
+      font-size:15px;
+      font-family:'Inter',sans-serif;
+    }
+
+    textarea {
+      min-height:160px;
+      resize:vertical;
+    }
+
+    button {
+      background:#d4af37;
+      color:#111;
+      border:none;
+      padding:16px 28px;
+      border-radius:999px;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .25s ease;
+    }
+
+    button:hover {
+      background:#c49f2f;
+      transform:translateY(-2px);
+    }
+
+    .whatsapp-btn {
+      display:inline-block;
+      margin-top:12px;
+      background:#25D366;
+      color:white;
+      padding:14px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    footer {
+      background:#111;
+      color:#bbb;
+      text-align:center;
+      padding:32px 20px;
+      margin-top:40px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns:1fr;
+      }
+
+      .hero h1 {
+        font-size:48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LUXE HAUS CONCEPT</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Let's Discuss Your Home</h1>
+    <p>
+      Planning a renovation or interior design project? We'd love to understand your space, style, and budget requirements.
+    </p>
+  </section>
+
+  <section class="container">
+
+    <div class="card">
+      <h2>Get In Touch</h2>
+
+      <div class="info-item">
+        <h3>Email</h3>
+        <p>kenneth@luxehausconcept.com</p>
+      </div>
+
+      <div class="info-item">
+        <h3>Phone / WhatsApp</h3>
+        <p>+65 XXXX XXXX</p>
+      </div>
+
+      <div class="info-item">
+        <h3>Service Area</h3>
+        <p>Singapore • HDB • Condominium • Landed Homes</p>
+      </div>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/65XXXXXXXX"
+         target="_blank">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>Request a Consultation</h2>
+
+      <form action="mailto:kenneth@luxehausconcept.com" method="post" enctype="text/plain">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="text" name="property" placeholder="Property Type (HDB / Condo / Landed)">
+
+        <textarea name="message" placeholder="Tell us about your renovation project, preferred style, and timeline..."></textarea>
+
+        <button type="submit">Send Enquiry</button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Luxe Haus Concept Pte Ltd • Singapore • Interior Design & Renovation
+  </footer>
+
+</body>
+</html>
+```
