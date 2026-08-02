@@ -24,27 +24,32 @@
     }
 
     header {
-      background:#111;
-      padding:22px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:100;
+      background: #111;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
     .logo {
-      color:#d4af37;
-      font-size:28px;
-      letter-spacing:2px;
+      color: #d4af37;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      white-space: nowrap;
     }
 
+    nav {
+        display: flex;
+        gap: 22px;
+        flex-wrap: nowrap;
+    }
+    
     nav a {
       color:white;
       text-decoration:none;
-      margin-left:28px;
-      font-size:14px;
+      font-size:13px;
       text-transform:uppercase;
       font-weight:600;
     }
@@ -172,11 +177,11 @@
     <div class="logo">LUXE HAUS CONCEPT</div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
     </nav>
   </header>
 

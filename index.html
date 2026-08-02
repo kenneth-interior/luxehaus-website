@@ -24,38 +24,73 @@
 
     /* ===== HEADER ===== */
     .header {
-      background: #111;
-      padding: 22px 6%;
+      background: #050505;
+      padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 82px;
+      border-bottom: 1px solid rgba(212,175,55,0.08);
     }
 
     .logo {
       color: #d4af37;
-      font-size: 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
       font-weight: 600;
       letter-spacing: 2px;
+      text-transform: uppercase;
       white-space: nowrap;
+      line-height: 1.1;
     }
 
-    .nav {
+    nav {
       display: flex;
-      gap: 22px;
+      align-items: center;
+      gap: 26px;
       flex-wrap: nowrap;
     }
 
-    .nav a {
-      color: white;
+    nav a {
+      color: #ffffff;
       text-decoration: none;
       font-size: 13px;
-      text-transform: uppercase;
       font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.25s ease, opacity 0.25s ease;
     }
 
-    .nav a:hover {
-      opacity: 0.75;
+    nav a:hover {
+      color: #d4af37;
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        padding: 16px 4%;
+        flex-direction: column;
+        gap: 14px;
+        min-height: auto;
+      }
+
+      .logo {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      nav {
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
     }
 
     /* ===== HERO SECTION ===== */
@@ -179,7 +214,8 @@
   <header class="header">
     <div class="logo">LUXE HAUS CONCEPT</div>
 
-    <nav class="nav">
+    <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="portfolio.html">Portfolio</a>
