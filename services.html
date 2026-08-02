@@ -1,0 +1,182 @@
+## services.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Luxe Haus Concept</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      line-height: 1.7;
+      background: #fafafa;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    header {
+      background: #111;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: white;
+      padding: 120px 8% 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    .services {
+      padding: 80px 8%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 32px 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LUXE HAUS CONCEPT</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>
+      Thoughtfully designed renovation and interior solutions tailored for modern Singapore homes.
+    </p>
+  </section>
+
+  <section class="services">
+
+    <div class="card">
+      <h3>HDB Renovation</h3>
+      <p>
+        Smart space planning, storage solutions, and contemporary finishes for BTO and resale flats.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Condominium Design</h3>
+      <p>
+        Elegant interiors that maximise comfort, functionality, and property value.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Landed Home Renovation</h3>
+      <p>
+        Bespoke design solutions for larger homes, including spatial reconfiguration and premium finishes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Custom Carpentry</h3>
+      <p>
+        Built-in wardrobes, TV consoles, kitchen cabinets, study areas, and tailored storage systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Kitchen Renovation</h3>
+      <p>
+        Functional kitchen layouts with durable materials, quality hardware, and efficient workflow planning.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Bathroom Renovation</h3>
+      <p>
+        Modern, practical bathroom upgrades focused on comfort, durability, and easy maintenance.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Luxe Haus Concept Pte Ltd • Singapore
+  </footer>
+
+</body>
+</html>
+```
