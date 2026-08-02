@@ -1,0 +1,177 @@
+## portfolio.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Luxe Haus Concept</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:#fafafa;
+      color:#222;
+    }
+
+    h1, h2, h3 {
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    header {
+      background:#111;
+      padding:22px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo {
+      color:#d4af37;
+      font-size:28px;
+      letter-spacing:2px;
+    }
+
+    nav a {
+      color:white;
+      text-decoration:none;
+      margin-left:28px;
+      font-size:14px;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
+    .hero {
+      padding:140px 8% 80px;
+      text-align:center;
+      background:linear-gradient(180deg,#f8f8f8 0%,#ffffff 100%);
+    }
+
+    .hero h1 {
+      font-size:64px;
+      margin-bottom:16px;
+    }
+
+    .hero p {
+      max-width:720px;
+      margin:auto;
+      color:#666;
+      font-size:18px;
+    }
+
+    .grid {
+      max-width:1200px;
+      margin:auto;
+      padding:80px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;
+    }
+
+    .project {
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,0.06);
+      transition:transform .3s ease;
+    }
+
+    .project:hover {
+      transform:translateY(-6px);
+    }
+
+    .project img {
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .project-content {
+      padding:24px;
+    }
+
+    .project h3 {
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .project p {
+      color:#666;
+      line-height:1.7;
+    }
+
+    footer {
+      background:#111;
+      color:#bbb;
+      text-align:center;
+      padding:32px 20px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LUXE HAUS CONCEPT</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Portfolio</h1>
+    <p>
+      A selection of interior design and renovation inspirations. Replace these placeholder images with your completed Luxe Haus Concept projects.
+    </p>
+  </section>
+
+  <section class="grid">
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Modern HDB Living Room">
+      <div class="project-content">
+        <h3>Modern HDB Living Room</h3>
+        <p>4-Room BTO • Scandinavian Contemporary</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="Condominium Kitchen Renovation">
+      <div class="project-content">
+        <h3>Condominium Kitchen Renovation</h3>
+        <p>3-Bedroom Condo • Modern Luxury</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Landed Master Bedroom">
+      <div class="project-content">
+        <h3>Landed Master Bedroom</h3>
+        <p>Landed Property • Contemporary Warm Luxury</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Luxe Haus Concept Pte Ltd • Singapore
+  </footer>
+
+</body>
+</html>
+```
